@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import { useDispatch } from "react-redux";
 import { useLocation } from "react-router-dom";
+import { toast } from "react-toastify";
 import addContentData from "../../redux/thunk/contents/addContentData";
 import updateContentData from "../../redux/thunk/contents/updateContentData";
 import TagItem from "./TagItem";
@@ -40,9 +41,14 @@ const Write = ({ name }) => {
     };
     if (state) {
       dispatch(updateContentData(state._id, content));
+      toast.success("Post update successfully!");
     } else {
-      console.log("Submitting");
       dispatch(addContentData({ ...content, createdAt: Date.now() }));
+      setTitle("");
+      setImage("");
+      setDescription("");
+      setTags([]);
+      toast.success("Post added successfully!");
     }
   };
 
@@ -57,7 +63,7 @@ const Write = ({ name }) => {
         >
           <div>
             <label
-              for="email"
+              htmlFor="email"
               className="block mb-2 text-sm font-medium text-gray-900 "
             >
               Title
@@ -73,7 +79,7 @@ const Write = ({ name }) => {
           </div>
           <div>
             <label
-              for="email"
+              htmlFor="email"
               className="block mb-2 text-sm font-medium text-gray-900 "
             >
               Image
@@ -89,7 +95,7 @@ const Write = ({ name }) => {
           </div>
           <div>
             <label
-              for="message"
+              htmlFor="message"
               className="block mb-2 text-sm font-medium text-gray-900"
             >
               Description
@@ -104,7 +110,7 @@ const Write = ({ name }) => {
           </div>
           <div>
             <label
-              for="message"
+              htmlFor="message"
               className="block mb-2 text-sm font-medium text-gray-900"
             >
               Add Tag

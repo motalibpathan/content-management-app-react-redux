@@ -29,7 +29,7 @@ const xMarkIcon = (
   <svg
     aria-hidden="true"
     className="w-3.5 h-3.5"
-    ariaHidden="true"
+    aria-hidden="true"
     fill="currentColor"
     viewBox="0 0 20 20"
     xmlns="http://www.w3.org/2000/svg"
