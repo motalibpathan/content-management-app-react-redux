@@ -36,11 +36,6 @@ const contentReducer = (state = initialState, action) => {
       const rest = state.contents.filter(
         (content) => content._id !== action.payload._id
       );
-      console.log("Payload", action.payload);
-      console.log(
-        "🚀 ~ file: contentReducer.js:39 ~ contentReducer ~ rest",
-        rest
-      );
 
       return {
         ...state,

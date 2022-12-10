@@ -1,7 +1,6 @@
 import { addContent } from "../../actions/contentActions";
 
 const addContentData = (content) => {
-  console.log("add content data");
   return async (dispatch, getState) => {
     const res = await fetch(
       "https://content-management-app-server.vercel.app/blog",

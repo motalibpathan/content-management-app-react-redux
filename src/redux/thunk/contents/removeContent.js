@@ -9,7 +9,6 @@ const removeContent = (id) => {
       }
     );
     const data = await res.json();
-    console.log(data);
     if (data.deletedCount) {
       dispatch(deleteContent(id));
     }

@@ -7,7 +7,6 @@ import {
 } from "../actionTypes/actionTypes";
 
 export const getContents = (data) => {
-  console.log("get content called with data: ", data);
   return {
     type: GET_CONTENT,
     payload: data,
@@ -15,7 +14,6 @@ export const getContents = (data) => {
 };
 
 export const addToRead = (data) => {
-  console.log("get content called with data: ", data);
   return {
     type: ADD_TO_READ,
     payload: data,
@@ -23,7 +21,6 @@ export const addToRead = (data) => {
 };
 
 export const addContent = (content) => {
-  console.log("addContent");
   return {
     type: ADD_CONTENT,
     payload: content,
@@ -38,7 +35,6 @@ export const deleteContent = (id) => {
 };
 
 export const updateContent = (data) => {
-  console.log("get content called with data: ", data);
   return {
     type: UPDATE_CONTENT,
     payload: data,
